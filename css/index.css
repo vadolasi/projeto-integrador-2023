@@ -1,0 +1,16 @@
+[un-cloak] {
+    display: none;
+}
+
+#hero {
+    background-image: url("../images/neurons.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navbar-scrolled {
+    background-color: #0c4a6e;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Integrador</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@unocss/reset/tailwind.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <header class="fixed bg-transparent z-50 w-full h-20" id="navbar">
+        <nav class="w-full h-full flex justify-center items-center">
+            <ul class="list-none flex gap-5 text-white">
+                <li>
+                    <a href="/" class="font-semibold">Home</a>
+                </li>
+                <li>
+                    <a href="/">Teste</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section id="hero" class="h-screen">
+        <div class="w-full h-full flex items-center justify-center md:w-2/3 relative gap-5 bg-gradient-to-r from-black via-yello-500/50 to-gray-900/0">
+            <div class="p-10 md:p-0 flex flex-col gap-10">
+                <h1 class="text-4xl md:text-6xl text-white font-bold text-white-400 drop-shadow-lg text-gray-100" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="750">Neurônios e células nervosas</h1>
+                <h2 class="text-2xl md:text-4xl text-white font-semibold tetx-gray-400" data-aos="fade-up" data-aos-delay="1200" data-aos-duration="750">Oque são, onde vivem, como se alimentam</h2>
+            </div>
+        </div>
+    </section>
+    <section class="bg-blue-700">
+        <div class="px-10 md:px-0 container mx-auto py-10 text-white">
+            <p>Neurônios são as células que caracterizam o sistema nervoso, responsáveis por transmitir impulsos ao cérebro.<p>
+            <p>Base do sistema nervoso, o neurônio é a célula característica do sistema nervoso com a capacidade de estabelecer conexões entre si ao receber estímulos do ambiente externo ou do próprio organismo. São os responsáveis por transmitir os impulsos nervosos ao cérebro. Temos cerca de 86 bilhões de neurônios e sua estrutura é geralmente a mesma: há o corpo celular, que acomoda o núcleo e as organelas celulares; o axônio, uma prolongação única, revestida de mielina (camada lipídica que atua na condução dos impulsos nervosos) e responsável por conduzir os impulsos; e os dendritos, que são ramificações tanto do corpo celular quanto do axônio e realizam a comunicação entre os neurônios, por meio das sinapses.</p>
+        </div>
+    </section>
+    <section class="bg-blue-900 p-10 flex flex-col items-center justify-center">
+        <video controls class="w-full md:w-1/2">
+            <source src="./videos/video.mp4" type="video/mp4">
+        </video>
+    </section>
+    <script src="./js/index.js"></script>
+</body>
+</html>
