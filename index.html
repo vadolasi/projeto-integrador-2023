@@ -1,47 +1,69 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Integrador</title>
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/uno.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@unocss/reset/tailwind.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
-<body>
-    <header class="fixed bg-transparent z-50 w-full h-20" id="navbar">
-        <nav class="w-full h-full flex justify-center items-center">
-            <ul class="list-none flex gap-5 text-white">
-                <li>
-                    <a href="/" class="font-semibold">Home</a>
-                </li>
-                <li>
-                    <a href="/">Teste</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+<body class="bg-bluegray-950 text-white">
+    <a class="fixed bottom-5 right-5 rounded-full bg-white text-black w-10 h-10 flex items-center justify-center" href="#sumario" data-aos="fade-in" data-aos-anchor="#estrutura">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6l1.41 1.41Z"/></svg>
+    </a>
     <section id="hero" class="h-screen">
         <div class="w-full h-full flex items-center justify-center md:w-2/3 relative gap-5 bg-gradient-to-r from-black via-yello-500/50 to-gray-900/0">
             <div class="p-10 md:p-0 flex flex-col gap-10">
-                <h1 class="text-4xl md:text-6xl text-white font-bold text-white-400 drop-shadow-lg text-gray-100" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="750">Neurônios e células nervosas</h1>
-                <h2 class="text-2xl md:text-4xl text-white font-semibold tetx-gray-400" data-aos="fade-up" data-aos-delay="1200" data-aos-duration="750">Oque são, onde vivem, como se alimentam</h2>
+                <h1 class="text-4xl md:text-6xl font-bold drop-shadow-lg text-gray-100" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="750">Neurônios e células nervosas</h1>
+                <h2 class="text-2xl md:text-4xl font-semibold text-gray-300" data-aos="fade-up" data-aos-delay="1200" data-aos-duration="750">O que são, onde vivem, como se alimentam</h2>
             </div>
         </div>
+        <a href="#sumario" class="absolute bottom-5 animate-bounce w-full flex justify-center" data-aos-delay="2400" data-aos-duration="750">
+            <svg data-aos="fade-up" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><path fill="currentColor" d="M16.59 5.59L18 7l-6 6l-6-6l1.41-1.41L12 10.17l4.59-4.58m0 6L18 13l-6 6l-6-6l1.41-1.41L12 16.17l4.59-4.58Z"/></svg>
+        </a>
     </section>
-    <section class="bg-blue-700">
-        <div class="px-10 md:px-0 container mx-auto py-10 text-white">
-            <p>Neurônios são as células que caracterizam o sistema nervoso, responsáveis por transmitir impulsos ao cérebro.<p>
-            <p>Base do sistema nervoso, o neurônio é a célula característica do sistema nervoso com a capacidade de estabelecer conexões entre si ao receber estímulos do ambiente externo ou do próprio organismo. São os responsáveis por transmitir os impulsos nervosos ao cérebro. Temos cerca de 86 bilhões de neurônios e sua estrutura é geralmente a mesma: há o corpo celular, que acomoda o núcleo e as organelas celulares; o axônio, uma prolongação única, revestida de mielina (camada lipídica que atua na condução dos impulsos nervosos) e responsável por conduzir os impulsos; e os dendritos, que são ramificações tanto do corpo celular quanto do axônio e realizam a comunicação entre os neurônios, por meio das sinapses.</p>
-        </div>
-    </section>
-    <section class="bg-blue-900 p-10 flex flex-col items-center justify-center">
-        <video controls class="w-full md:w-1/2">
-            <source src="./videos/video.mp4" type="video/mp4">
-        </video>
-    </section>
+    <div class="bg-bluegray-950 py-10 px-10 w-full md:px-0 w-2/3 mx-auto lg:w-1/2 xl:w-1/3 flex flex-col gap-10 prose prose-light">
+        <section id="sumario">
+            <h1>Sumário</h1>
+            <ul class="mt-10 flex flex-col gap-4 list-decimal underline ml-5">
+                <li>
+                    <a href="#estrutura" class="text-white">Estrutura</a>
+                </li>
+                <li>
+                    <a href="#transmissão" class="text-white">Transmissão de sinais</a>
+                </li>
+                <li>
+                    <a href="#tipos" class="text-white">Tipos de neurônios</a>
+                </li>
+                <li>
+                    <a href="#sistema_nervoso" class="text-white">Sistema nervoso</a>
+                </li>
+            </ul>
+        </section>
+        <section id="estrutura">
+            <h1>Estrutura</h2>
+            <img src="./images/1-partes-do-neuronio.webp" />
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+        </section>
+        <section id="transmissão">
+            <h1>Transmissão de sinais</h2>
+            <img src="./images/sinapse-quimica-ok.webp" />
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+        </section>
+        <section id="tipos">
+            <h1>Tipos de neurônios</h2>
+            <img src="./images/tipos-de-neuronio.webp" />
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+        </section>
+        <section id="sistema_nervoso">
+            <h1>Sistema nervoso</h2>
+            <img src="./images/546fe5fe28533-sistema-nervoso-large.webp" />
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+        </section>
+    </div>
     <script src="./js/index.js"></script>
 </body>
 </html>
