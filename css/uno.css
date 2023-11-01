@@ -9,16 +9,26 @@
 .fixed{position:fixed;}
 .relative{position:relative;}
 .bottom-5{bottom:1.25rem;}
+.left-0{left:0;}
+.right-0{right:0;}
 .right-5{right:1.25rem;}
+.top-0{top:0;}
+.z-50{z-index:50;}
 .mx-auto{margin-left:auto;margin-right:auto;}
-.ml-5{margin-left:1.25rem;}
+.mb-0{margin-bottom:0;}
+.mb-1{margin-bottom:0.25rem;}
+.mb-5{margin-bottom:1.25rem;}
+.mt-1{margin-top:0.25rem;}
 .mt-10{margin-top:2.5rem;}
 .inline-block{display:inline-block;}
 .hidden{display:none;}
-.h-10{height:2.5rem;}
+.h-\[calc\(100\%-1rem\)\]{height:calc(100% - 1rem);}
+.h-15{height:3.75rem;}
 .h-full{height:100%;}
 .h-screen{height:100vh;}
-.w-10{width:2.5rem;}
+.max-h-full{max-height:100%;}
+.max-w-2xl{max-width:42rem;}
+.w-15{width:3.75rem;}
 .w-2\/3{width:66.6666666667%;}
 .w-full{width:100%;}
 .flex{display:flex;}
@@ -26,34 +36,48 @@
 .flex-wrap{flex-wrap:wrap;}
 @keyframes bounce{0%, 100% {transform:translateY(-25%);animation-timing-function:cubic-bezier(0.8,0,1,1)} 50% {transform:translateY(0);animation-timing-function:cubic-bezier(0,0,0.2,1)}}
 .animate-bounce{animation:bounce 1s linear infinite;}
-.list-decimal{list-style-type:decimal;}
 .items-center{align-items:center;}
 .justify-center{justify-content:center;}
 .gap-10{gap:2.5rem;}
 .gap-4{gap:1rem;}
 .gap-5{gap:1.25rem;}
+.overflow-x-hidden{overflow-x:hidden;}
+.overflow-y-auto{overflow-y:auto;}
 .scroll-smooth{scroll-behavior:smooth;}
 .border{border-width:1px;}
+.border-t{border-top-width:1px;}
 .rounded-full{border-radius:9999px;}
+.rounded-lg{border-radius:0.5rem;}
 .bg-bluegray-950{--un-bg-opacity:1;background-color:rgb(2 6 23 / var(--un-bg-opacity));}
 .bg-white{--un-bg-opacity:1;background-color:rgb(255 255 255 / var(--un-bg-opacity));}
 .from-black{--un-gradient-from-position:0%;--un-gradient-from:rgb(0 0 0 / var(--un-from-opacity, 1)) var(--un-gradient-from-position);--un-gradient-to-position:100%;--un-gradient-to:rgb(0 0 0 / 0) var(--un-gradient-to-position);--un-gradient-stops:var(--un-gradient-from), var(--un-gradient-to);}
 .to-gray-900\/0{--un-gradient-to-position:100%;--un-gradient-to:rgb(17 24 39 / 0) var(--un-gradient-to-position);}
 .bg-gradient-to-r{--un-gradient-shape:to right;--un-gradient:var(--un-gradient-shape), var(--un-gradient-stops);background-image:linear-gradient(var(--un-gradient));}
 .p-10{padding:2.5rem;}
+.p-3{padding:0.75rem;}
+.p-4{padding:1rem;}
 .px-10{padding-left:2.5rem;padding-right:2.5rem;}
 .py-10{padding-top:2.5rem;padding-bottom:2.5rem;}
 .text-2xl{font-size:1.5rem;line-height:2rem;}
 .text-4xl{font-size:2.25rem;line-height:2.5rem;}
+.text-lg{font-size:1.125rem;line-height:1.75rem;}
 .font-bold{font-weight:700;}
+.font-normal{font-weight:400;}
 .font-semibold{font-weight:600;}
 .text-black{--un-text-opacity:1;color:rgb(0 0 0 / var(--un-text-opacity));}
+.text-blue-500{--un-text-opacity:1;color:rgb(59 130 246 / var(--un-text-opacity));}
 .text-gray-100{--un-text-opacity:1;color:rgb(243 244 246 / var(--un-text-opacity));}
-.text-gray-300{--un-text-opacity:1;color:rgb(209 213 219 / var(--un-text-opacity));}
+.text-gray-200{--un-text-opacity:1;color:rgb(229 231 235 / var(--un-text-opacity));}
+.text-gray-600{--un-text-opacity:1;color:rgb(75 85 99 / var(--un-text-opacity));}
 .text-white{--un-text-opacity:1;color:rgb(255 255 255 / var(--un-text-opacity));}
-.underline{text-decoration-line:underline;}
+.no-underline{text-decoration:none;}
+.shadow{--un-shadow:var(--un-shadow-inset) 0 1px 3px 0 var(--un-shadow-color, rgb(0 0 0 / 0.1)),var(--un-shadow-inset) 0 1px 2px -1px var(--un-shadow-color, rgb(0 0 0 / 0.1));box-shadow:var(--un-ring-offset-shadow), var(--un-ring-shadow), var(--un-shadow);}
+.shadow-bluegray-800{--un-shadow-opacity:1;--un-shadow-color:rgb(30 41 59 / var(--un-shadow-opacity));}
+.hover\:shadow-lg:hover{--un-shadow:var(--un-shadow-inset) 0 10px 15px -3px var(--un-shadow-color, rgb(0 0 0 / 0.1)),var(--un-shadow-inset) 0 4px 6px -4px var(--un-shadow-color, rgb(0 0 0 / 0.1));box-shadow:var(--un-ring-offset-shadow), var(--un-ring-shadow), var(--un-shadow);}
 .drop-shadow-lg{--un-drop-shadow:drop-shadow(0 10px 8px var(--un-drop-shadow-color, rgb(0 0 0 / 0.04))) drop-shadow(0 4px 3px var(--un-drop-shadow-color, rgb(0 0 0 / 0.1)));filter:var(--un-blur) var(--un-brightness) var(--un-contrast) var(--un-drop-shadow) var(--un-grayscale) var(--un-hue-rotate) var(--un-invert) var(--un-saturate) var(--un-sepia);}
 @media (min-width: 768px){
+.md\:inset-0{inset:0;}
+.md\:right-1\/4{right:25%;}
 .md\:w-2\/3{width:66.6666666667%;}
 .md\:p-0{padding:0;}
 .md\:px-0{padding-left:0;padding-right:0;}

@@ -9,61 +9,155 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@unocss/reset/tailwind.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script src="./js/isInViewport.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css" rel="stylesheet" />
 </head>
 <body class="bg-bluegray-950 text-white">
-    <a class="fixed bottom-5 right-5 rounded-full bg-white text-black w-10 h-10 flex items-center justify-center" href="#sumario" data-aos="fade-in" data-aos-anchor="#estrutura">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6l1.41 1.41Z"/></svg>
+    <a class="fixed bottom-5 right-5 md:right-1/4 rounded-full bg-white text-black w-15 h-15 flex items-center justify-center" href="#sumario" data-aos="fade-in" data-aos-anchor="#estrutura">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6l1.41 1.41Z"/></svg>
     </a>
     <section id="hero" class="h-screen">
         <div class="w-full h-full flex items-center justify-center md:w-2/3 relative gap-5 bg-gradient-to-r from-black via-yello-500/50 to-gray-900/0">
             <div class="p-10 md:p-0 flex flex-col gap-10">
                 <h1 class="text-4xl md:text-6xl font-bold drop-shadow-lg text-gray-100" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="750">Neurônios e células nervosas</h1>
-                <h2 class="text-2xl md:text-4xl font-semibold text-gray-300" data-aos="fade-up" data-aos-delay="1200" data-aos-duration="750">O que são, onde vivem, como se alimentam</h2>
+                <h2 class="text-2xl md:text-4xl font-semibold text-gray-200" data-aos="fade-up" data-aos-delay="1200" data-aos-duration="750">O que são, onde vivem, como se alimentam</h2>
             </div>
         </div>
-        <a href="#sumario" class="absolute bottom-5 animate-bounce w-full flex justify-center" data-aos-delay="2400" data-aos-duration="750">
-            <svg data-aos="fade-up" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><path fill="currentColor" d="M16.59 5.59L18 7l-6 6l-6-6l1.41-1.41L12 10.17l4.59-4.58m0 6L18 13l-6 6l-6-6l1.41-1.41L12 16.17l4.59-4.58Z"/></svg>
+        <a href="#sumario" class="absolute bottom-5 animate-bounce w-full flex justify-center">
+            <svg  data-aos="fade-up" data-aos-delay="2400" data-aos-duration="750" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><path fill="currentColor" d="M16.59 5.59L18 7l-6 6l-6-6l1.41-1.41L12 10.17l4.59-4.58m0 6L18 13l-6 6l-6-6l1.41-1.41L12 16.17l4.59-4.58Z"/></svg>
         </a>
     </section>
-    <div class="bg-bluegray-950 py-10 px-10 w-full md:px-0 w-2/3 mx-auto lg:w-1/2 xl:w-1/3 flex flex-col gap-10 prose prose-light">
-        <section id="sumario">
-            <h1>Sumário</h1>
-            <ul class="mt-10 flex flex-col gap-4 list-decimal underline ml-5">
-                <li>
-                    <a href="#estrutura" class="text-white">Estrutura</a>
-                </li>
-                <li>
-                    <a href="#transmissão" class="text-white">Transmissão de sinais</a>
-                </li>
-                <li>
-                    <a href="#tipos" class="text-white">Tipos de neurônios</a>
-                </li>
-                <li>
-                    <a href="#sistema_nervoso" class="text-white">Sistema nervoso</a>
-                </li>
-            </ul>
+    <div class="py-10 px-10 w-full md:px-0 w-2/3 mx-auto lg:w-1/2 xl:w-1/3 flex flex-col gap-10 prose prose-light text-lg">
+        <section id="sumario" class="min-h-screen/2">
+            <h1 class="mb-0">Sumário</h1>
+            <span class="text-gray-600 mb-5 mt-1">Clique em algum item para navegar até sua seção</span>
+            <dl class="mt-10 flex flex-col gap-4">
+                <a class="flex flex-col no-underline font-normal rounded-lg p-3 hover:shadow-lg shadow shadow-bluegray-800" href="#estrutura">
+                    <dt class="font-semibold">1 - Estrutura</dt>
+                    <dd class="mb-1">Entenda o que são e quais as partes de um neurônio</dd>
+                </a>
+                <a class="flex flex-col no-underline font-normal rounded-lg p-3 hover:shadow-lg shadow shadow-bluegray-800" href="#tipos">
+                    <dt class="font-semibold">3 - Transmissão de sinais</dt>
+                    <dd class="mb-1">Entenda como os neurônios conversam entre si</dd>
+                </a>
+                <a class="flex flex-col no-underline font-normal rounded-lg p-3 hover:shadow-lg shadow shadow-bluegray-800" href="#transmissão">
+                    <dt class="font-semibold">2 - Tipos de neurônios</dt>
+                    <dd class="mb-1">Neurônios não são todos iguais. Entandam quais são seus tipos.</dd>
+                </a>
+                <a class="flex flex-col no-underline font-normal rounded-lg p-3 hover:shadow-lg shadow shadow-bluegray-800" href="#sistema_nervoso">
+                    <dt class="font-semibold">4 - Sistema nervoso</dt>
+                    <dd class="mb-1 text-lg">Entenda a importância dos neurônios no mundo macroscópico</dd>
+                </a>
+            </dl>
         </section>
         <section id="estrutura">
             <h1>Estrutura</h2>
             <img src="./images/1-partes-do-neuronio.webp" />
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+            <p>A função dos neurônios é a transmissão de impulsos nervosos. Eles são compostos por um corpo celular grande e fibras nervosas, sendo elas os axônios e os dentritos</p>
+            <ul>
+                <li>Corpo celular ou pericário: O corpo celular é a região onde está localizado o núcleo do neurônio, bem como a maioria de suas organelas. Seu formato é variado e pode ser esférico, estrelado ou piramidal, por exemplo;</li>
+                <li>Axônios: prolongamento único, de diâmetro constante na maior parte de seu percurso e ramificado em sua terminação. É especializado na condução de impulsos que transmitem informações do neurônio para outras células (nervosas, musculares, glandulares);</li>
+                <li>Dendritos: ramificações presentes no corpo celular que recebem os impulsos nervosos.</li>
+            </ul>
+            <button data-modal-target="modal-estrutura" data-modal-toggle="modal-estrutura" type="button" class="font-semibold text-blue-500">Clique aqui para ver um vídeo sobre a estrutura dos neurônios</button>
+            <div id="modal-estrutura" tabindex="100" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+            <div class="relative w-full max-w-2xl max-h-full flex justify-center">
+                <video controls>
+                    <source src="./videos/estrutura.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
         </section>
         <section id="transmissão">
             <h1>Transmissão de sinais</h2>
             <img src="./images/sinapse-quimica-ok.webp" />
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+            <h2>Sinapses</h2>
+            <p>As conexões entre os neurônios (e entre neurônios e outros tipos de células, como as musculares) são chamadas de sinapses. Essas conexões não são uma ligação física direta, existe um pequeno espaço vazio entre cada célula, a troca de informações vai ocorrer por meio de neurotrasmissores e sinais elétricos que passam por esse espaço. Elas podem ser de dois tipos:</p>
+            <ul>
+                <li><strong>Sinapse química</strong>: A maioria das sinapses são químicas. Nesse tipo de sinapse a comunicação é feita por neurotrasmissores. Essas sinapses iniciam no terminal do axônio (uma região pouco mais alargada formando um botão) da célula pré-sináptica. As vesículas contendo neurotransmissores são liberadas na fenda sináptica e reconhecidas por receptores químicos (proteínas específicas) na membrana da célula pós-sináptica. A seguir se fundem com a membrana e liberam o seu conteúdo. A ligação química entre o neurotransmissor e o receptor do neurônio seguinte gera mudanças que irão fazer com que o sinal elétrico seja transmitido;</li>
+                <li><strong>Sinapse elétrica</strong>: nessas sinapses não há participação de neurotransmissores, o sinal elétrico é conduzido diretamente de uma célula a outra através de junções comunicantes (gap junctions). Essas junções são canais que conduzem íons, obtendo respostas quase imediatas, isso quer dizer que o potencial de ação é gerado diretamente.</li>
+            </ul>
+            <h2>Neurotransmissores</h2>
+            <p>Neurotransmissores são substâncias químicas produzidas pelos neurônios que tem a função de transmitir as informações de um neurônio para outro.
+            <h3>Classificação:</h3>
+            <ul>
+                <li><strong>Excitatórios</strong>: esses neurônios provocam a despolarização da membrana pós-sinápticas.</li>
+                <li><strong>Inibitórios</strong>: esses neurônios promovem a hiperpolarização da membrana pós-sinápticas.</li>
+            </ul>
+            <h3>Tipos de Neurotrasmissores:</h3>
+            <ul>
+                <li><strong>Acetilcolina</strong>: A função desse neurotransmissor é estimular a propagação dos impulsos nervosos das células nervosas para células motoras e músculos esqueléticos. Essa molécula está relacionada com o controle do tônus muscular, aprendizado e performance sexual. Esse neurotransmissor destaca-se ainda por ser encontrado em grande quantidade no organismo e ter sido o primeiro a ser descoberto;</li>
+                <li><strong>Endorfina</strong>: Esse neurotransmissor relaciona-se com sentimentos como euforia e êxtase. Esse neurotransmissor atua também aliviando a sensação de dor e reduzindo o estresse;</li>
+                <li><strong>Dopamina</strong>: A função da dopamina está relacionada com o local onde ela atua. Assim como a endorfina, essa molécula também está relacionada com a euforia e, além disso, apresenta relação com a execução de movimentos suaves e regulação das informações advindas das diferentes partes do cérebro;</li>
+                <li><strong>Serotonina</strong>: Esse neurotransmissor relaciona-se, por exemplo, com estímulos dos batimentos cardíacos, regulação dos níveis de humor e início do sono. Os medicamentos que tratam depressão buscam aumentar os níveis de serotonina, portanto, podemos dizer que esse neurotransmissor é importante na luta contra esse distúrbio mental.</li>
+            </ul>
+            <button data-modal-target="modal-transmicao" data-modal-toggle="modal-transmicao" type="button" class="font-semibold text-blue-500">Clique aqui para ver um vídeo sobre transmissão de sinais nervosos</button>
+            <div id="modal-transmicao" tabindex="100" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+            <div class="relative w-full max-w-2xl max-h-full flex justify-center">
+                <video controls>
+                    <source src="./videos/transmicao.mp4" type="video/mp4">
+                </video>
+            </div>
         </section>
         <section id="tipos">
             <h1>Tipos de neurônios</h2>
             <img src="./images/tipos-de-neuronio.webp" />
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+            <p></p>
+            <h2>Morfologia (forma)</h2>
+            <p>Os neurônios podem são classificados quanto a sua forma:</p>
+            <ul>
+                <li><strong>Neurônios bipolares</strong>: apresentam um dendrito e um axônio;</li>
+                <li><strong>Neurônios pseudounipolares</strong>: apresentam um prolongamento único, próximo ao corpo celular, que se divide em dois. Na vida embrionária, esses neurônios apresentam-se como neurônios bipolares;</li>
+                <li><strong>Neurônios multipolares</strong>: apresentam mais de dois prolongamentos celulares e são o tipo principal de neurônio.</li>
+            </ul>
+            <p>A maioria dos neurônios é multipolar; os bipolares podem ser encontrados na retina e na mucosa olfativa (ligados respectivamente, a visão e a audição). Já os neurônios pseudounipolares podem ser encontrados gânglios espinais e cranianos, responsáveis transmitir e processar informações sensoriais.</p>
+            <h2>Funções:</h2>
+            <p>Os neurônios também são classificados de acordo com a função que exercem:</p>
+            <ul>
+                <li><strong>Sensoriais ou aferentes</strong>: recebem estímulos e enviam-nos para o sistema nervoso central;</li>
+                <li><strong>Interneurônios</strong>: estabelecem conexões entre um neurônio e outro;</li>
+                <li><strong>Motores ou eferentes</strong>: conduzem impulsos do sistema nervoso central para outras partes do organismo.</li>
+            </ul>
+            <button data-modal-target="modal-tipos" data-modal-toggle="modal-tipos" type="button" class="font-semibold text-blue-500">Clique aqui para ver um vídeo sobre os tipos de neurônios</button>
+            <div id="modal-tipos" tabindex="100" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+            <div class="relative w-full max-w-2xl max-h-full flex justify-center">
+                <video controls>
+                    <source src="./videos/tipos.mp4" type="video/mp4">
+                </video>
+            </div>
         </section>
         <section id="sistema_nervoso">
             <h1>Sistema nervoso</h2>
             <img src="./images/546fe5fe28533-sistema-nervoso-large.webp" />
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+            <p>O sistema nervoso é um complexo sistema biológico que desempenha um papel fundamental no funcionamento do corpo humano e de muitos outros seres vivos. Ele é responsável por coordenar e regular as atividades do organismo, processando informações sensoriais, permitindo a comunicação entre diferentes partes do corpo e desempenhando funções essenciais para a sobrevivência e o funcionamento saudável.</p>
+            <h2>Divisão</h2>
+            <p>O sistema nervoso é dividido em duas partes principais:</p>
+            <ul>
+                <li><strong>Sistema nervoso central (SNC)</strong>: Composto pelo cérebro e pela medula espinhal. que atua como o centro de controle e processamento das informações;</li>
+                <li><strong>Sistema nervoso periférico (SNP)</strong>: Consiste nos nervos e gânglios que se estendem por todo o corpo, transmitindo sinais entre o SNC e o restante do organismo.</li>
+            </ul>
+            <button data-modal-target="modal-sistema" data-modal-toggle="modal-sistema" type="button" class="font-semibold text-blue-500">Clique aqui para ver um vídeo sobre o sistema nervoso</button>
+            <div id="modal-sistema" tabindex="100" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+            <div class="relative w-full max-w-2xl max-h-full flex justify-center">
+                <video controls>
+                    <source src="./videos/sistema_nervoso.mp4" type="video/mp4">
+                </video>
+            </div>
         </section>
     </div>
+    <footer class="border-t p-10">
+        <span>Projeto integrador 2023</span>
+        <br />
+        <span>
+            Produzido por:
+            <a href="https://instagram.com/vitordaniel.dev" target="_blank" class="text-blue-500">Vitor Daniel</a>,
+            <a href="https://instagram.com/luizfelipe.dev" target="_blank" class="text-blue-500">Luiz Felipe</a>,
+            <a href="https://instagram.com/luizfelipe.dev" target="_blank" class="text-blue-500">Luiz Felipe</a> e 
+            <a href="https://instagram.com/luizfelipe.dev" target="_blank" class="text-blue-500">Luiz Felipe</a>
+        </span>
+    </footer>
     <script src="./js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
 </body>
 </html>
